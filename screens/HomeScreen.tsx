@@ -232,7 +232,7 @@ const HomeScreen  = () => {
 
     return (
         <ScrollView style={{ flex: 1, backgroundColor: COLORS.white}}>
-            { renderPromo() }
+           { renderPromo() }
         </ScrollView>
     )
 }
