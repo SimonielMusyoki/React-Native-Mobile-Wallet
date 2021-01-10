@@ -18,6 +18,7 @@ import {LinearGradient} from 'expo-linear-gradient'
 
 import { COLORS, SIZES, FONTS, images, icons} from '../constants'
 import { TouchableNativeFeedback } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 
 const SignupScreen  = () => {
@@ -26,6 +27,7 @@ const SignupScreen  = () => {
     const [areas, setAreas] = useState([])
     const [selectedArea, setSelectedArea] = useState(null);
     const [showModal, setShowModal] = useState(false)
+    const navigation = useNavigation()
 
     useEffect(()=> {
         fetch("https://restcountries.eu/rest/v2/all")
@@ -245,7 +247,7 @@ const SignupScreen  = () => {
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}
-                onPress={() => console.log("Navigate to Home")}
+                onPress={() => navigation.navigate("Home")}
             >
                 <Text style={{ color: COLORS.white, ...FONTS.h3}}>Continue</Text>
             </TouchableOpacity>
