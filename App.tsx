@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { MoneyHistory, ScanScreen, SignupScreen } from './screens';
 import Tabs from './navigation/tabs'
 import GamesScreen from './screens/GamesScreen';
+import Transfers from './screens/TransferScreen';
 
 export default function App() {
 
@@ -38,6 +39,7 @@ export default function App() {
         <Stack.Screen name="Wallet" component={MoneyHistory} />
         <Stack.Screen name="Home" component={Tabs} />
         <Stack.Screen name="Games" component={GamesScreen} />
+        <Stack.Screen name="Transfer" component={Transfers} />
       </Stack.Navigator>
       
     </NavigationContainer>

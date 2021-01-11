@@ -12,6 +12,7 @@ import {
 import games from '../data/games'
 import Header from '../components/Header';
 import { COLORS, FONTS, SIZES } from '../constants';
+import SubHeading from '../components/SubHeader';
 
 export type GameTileProps={
     gameName: string;
@@ -43,6 +44,7 @@ const GamesScreen = () => {
     return (
         <View style={styles.container}>
             <Header headerText="Game" />
+            <SubHeading headerText="Choose Your Game" iconName="search" />
             <FlatList 
                 data={games.slice(0,8)}
                 keyExtractor={item => `${item.id}`}
