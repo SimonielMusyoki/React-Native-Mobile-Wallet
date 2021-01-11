@@ -11,7 +11,7 @@ import Svg, {
 } from 'react-native-svg'
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
-import { HomeScreen as Home,ScanScreen as Scan } from "../screens"
+import { HomeScreen as Home,ScanScreen as Scan, ProfileScreen } from "../screens"
 import { COLORS, icons } from "../constants"
 
 const Tab = createBottomTabNavigator()
@@ -171,7 +171,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="User"
-                component={Home}
+                component={ProfileScreen}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
