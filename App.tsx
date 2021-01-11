@@ -5,7 +5,7 @@ import { useFonts } from 'expo-font';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { HomeScreen, ScanScreen, SignupScreen } from './screens';
+import { MoneyHistory, ScanScreen, SignupScreen } from './screens';
 import Tabs from './navigation/tabs'
 
 export default function App() {
@@ -34,6 +34,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false}}>
         <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="History" component={MoneyHistory} />
         <Stack.Screen name="Home" component={Tabs} />
       </Stack.Navigator>
       

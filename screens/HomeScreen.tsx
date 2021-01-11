@@ -13,6 +13,7 @@ import specialPromoData from '../data/special_promo';
 import featuresData from '../data/features';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen  = () => {
 
@@ -89,6 +90,7 @@ const HomeScreen  = () => {
         }
 
         function renderFeatures(){
+            const navigation = useNavigation()
              const renderItem = ({item}) => (
                 <TouchableOpacity
                     style={{
@@ -96,7 +98,7 @@ const HomeScreen  = () => {
                         width: 60,
                         alignItems: 'center'
                     }}
-                    onPress={()=>console.log(item.description)}
+                    onPress={()=>navigation.navigate("History")}
                 >
                     <View style={{
                         height: 50,
@@ -231,7 +233,7 @@ const HomeScreen  = () => {
     }
 
     return (
-        <ScrollView style={{ flex: 1, backgroundColor: COLORS.white}}>
+        <ScrollView style={{ flex: 1, backgroundColor: COLORS.lightGray}}>
            { renderPromo() }
         </ScrollView>
     )
