@@ -89,6 +89,7 @@ const HomeScreen  = () => {
             )
         }
 
+
         function renderFeatures(){
             const navigation = useNavigation()
              const renderItem = ({item}) => (
@@ -98,7 +99,7 @@ const HomeScreen  = () => {
                         width: 60,
                         alignItems: 'center'
                     }}
-                    onPress={()=>navigation.navigate("History")}
+                    onPress={()=>navigation.navigate(item.description)}
                 >
                     <View style={{
                         height: 50,

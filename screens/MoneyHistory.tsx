@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { COLORS, FONTS, icons, SIZES } from '../constants';
 import { useNavigation } from '@react-navigation/native';
 import history from '../data/history'
+import Header from '../components/Header';
 
 const MoneyHistory = () => {
 
@@ -109,7 +110,7 @@ const MoneyHistory = () => {
     return (
         
         <View style={styles.container}>
-            { renderHeader() }
+            <Header headerText="Money History"/>
             <FlatList 
                 data={history}
                 keyExtractor={item => `${item.id}`}
